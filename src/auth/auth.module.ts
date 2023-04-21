@@ -13,16 +13,13 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
   imports: [
     ConfigModule,
     PassportModule.register({ defaultStrategy: 'jwt' }),
-    JwtModule.registerAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-      useFactory: async (configservice: ConfigService) => ({
-        secret: configservice.get('JWT_SECRET'),
-        signOptions: {
-          expiresIn: 3600,
-        },
-      }),
+    JwtModule.register({
+      secret: process.env.JWT_SECRET,
+      signOptions: {
+        expiresIn: 3600,
+      },
     }),
+
     TypeOrmModule.forFeature([User]),
   ],
   providers: [AuthService, UsersRepository, JwtStrategy],
