@@ -14,6 +14,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     ConfigModule,
     PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.register({
+      // secret: 'TestForLocal',
       secret: process.env.JWT_SECRET,
       signOptions: {
         expiresIn: 3600,
