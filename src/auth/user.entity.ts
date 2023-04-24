@@ -5,13 +5,13 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  // @Column({ unique: true })
+  // username: string;
   @Column({ unique: true })
-  username: string;
+  email: string;
+
   @Column()
   password: string;
-
-  // @Column()
-  // email: string;
 
   @Column({ default: false })
   vip: boolean;

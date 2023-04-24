@@ -15,7 +15,7 @@ export class UsersRepository extends Repository<User> {
   }
 
   async creatUser(authCredentialsDTO: AuthCredentialsDTO): Promise<void> {
-    const { username, password } = authCredentialsDTO;
+    const { email, password } = authCredentialsDTO;
 
     // hash
     const salt = await bcrypt.genSalt();
@@ -25,7 +25,7 @@ export class UsersRepository extends Repository<User> {
     // console.log('hashedPassword', hashedPassword);
 
     const user = this.create({
-      username,
+      email,
       password: hashedPassword,
     });
 
@@ -33,8 +33,8 @@ export class UsersRepository extends Repository<User> {
       await this.save(user);
     } catch (error) {
       if (error.code === '23505') {
-        //Dupliate username
-        throw new ConflictException('Username already exists');
+        //Dupliate email
+        throw new ConflictException('Email already exists');
       } else {
         throw new InternalServerErrorException();
       }

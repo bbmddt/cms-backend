@@ -20,15 +20,15 @@ export class AuthService {
 
   async signIn(
     authCredentialsDTO: AuthCredentialsDTO,
-  ): Promise<{ accessToken: string; username: string; vip: boolean }> {
-    const { username, password } = authCredentialsDTO;
-    const user = await this.usersRepository.findOne({ where: { username } });
+  ): Promise<{ accessToken: string; email: string; vip: boolean }> {
+    const { email, password } = authCredentialsDTO;
+    const user = await this.usersRepository.findOne({ where: { email } });
 
     if (user && (await bcrypt.compare(password, user.password))) {
-      const payload: JwtPayload = { username, vip: user.vip };
+      const payload: JwtPayload = { email, vip: user.vip };
       const accessToken: string = await this.jwtService.sign(payload);
 
-      return { accessToken, username, vip: user.vip };
+      return { accessToken, email, vip: user.vip };
     } else {
       throw new UnauthorizedException('Please check your login credentials');
     }
