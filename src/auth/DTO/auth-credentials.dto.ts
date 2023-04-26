@@ -6,8 +6,6 @@ export class AuthCredentialsDTO {
   // @MaxLength(20)
   // username: string;
   @IsString()
-  @MinLength(4)
-  @MaxLength(20)
   // email regex
   @Matches(/\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/, {
     message: 'email is invalid',
@@ -18,7 +16,7 @@ export class AuthCredentialsDTO {
   @MinLength(8)
   @MaxLength(20)
   @Matches(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, {
-    message: 'password is too weak',
+    message: 'password is invalid',
   })
   password: string;
 }
