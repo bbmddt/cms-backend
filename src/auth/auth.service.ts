@@ -30,7 +30,7 @@ export class AuthService {
 
       return { accessToken, email, vip: user.vip };
     } else {
-      throw new UnauthorizedException('Please check your login credentials');
+      throw new UnauthorizedException('email or password is invalid');
     }
   }
 }
