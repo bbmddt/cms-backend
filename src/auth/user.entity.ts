@@ -13,6 +13,9 @@ export class User {
   @Column()
   password: string;
 
-  @Column({ default: false })
-  vip: boolean;
+  @Column({ default: 'user' })
+  role: string;
+
+  @Column({ nullable: true })
+  refreshToken: string;
 }
