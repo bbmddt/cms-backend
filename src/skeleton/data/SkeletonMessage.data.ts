@@ -1,0 +1,185 @@
+import { SkeletonProps } from '../skeleton.interface';
+
+export const SkeletonMessager: SkeletonProps = {
+  menu: {
+    title:
+      // path === 'zh' ? LangSkeleton_Bone.zh.title : LangSkeleton_Bone.en.title,
+      '系列訊息管理',
+    sections: [
+      {
+        title: {
+          en: 'Reward Sharing Content',
+          zh: '獎賞分享内容',
+        },
+        path: 'admin/RewardSharingContent',
+        icon: { title: 'BackupTableIcon', sx: 'iconWhite' },
+        elements: [
+          {
+            modal: 'EditModal',
+            translateKey: 'RewardSharingContent',
+            components: [
+              {
+                key: 'vouchersharecontent',
+                type: 'CustomInput',
+                label: {
+                  en: 'Voucher Share Content',
+                  zh: '優惠卷分享内容',
+                },
+                grid: 12,
+                translateKey: 'RewardSharingContent',
+              },
+              {
+                key: 'GiftShareContent',
+                type: 'CustomInput',
+                label: {
+                  en: 'Gift Share Content',
+                  zh: '禮卷分享内容',
+                },
+                grid: 12,
+                translateKey: 'RewardSharingContent',
+              },
+              {
+                key: 'pointssharecontent',
+                type: 'CustomInput',
+                label: {
+                  en: 'Collector Share Content',
+                  zh: '印卡仔分享内容',
+                },
+                grid: 12,
+                translateKey: 'RewardSharingContent',
+              },
+            ],
+            buttons: [
+              {
+                key: 'save',
+                label: {
+                  en: 'save',
+                  zh: '儲存',
+                },
+                buttonType: 'submit',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: {
+          en: 'Shop Sharing Content',
+          zh: '店鋪分享內容',
+        },
+        path: 'admin/voucher',
+        icon: { title: 'MapIcon', sx: 'iconWhite' },
+        elements: [
+          {
+            modal: 'EditModal',
+            translateKey: 'RewardSharingContent',
+            components: [
+              {
+                key: 'brandShareContent',
+                type: 'CustomInput',
+                label: {
+                  en: 'brand Share Content',
+                  zh: '品牌分享内容',
+                },
+                grid: 12,
+                translateKey: 'RewardSharingContent',
+              },
+              {
+                key: 'ShopShareContent',
+                type: 'CustomInput',
+                label: {
+                  en: 'Shop Share Content',
+                  zh: '店鋪分享内容',
+                },
+                grid: 12,
+                translateKey: 'RewardSharingContent',
+              },
+            ],
+            buttons: [
+              {
+                key: 'save',
+                label: {
+                  en: 'save',
+                  zh: '儲存',
+                },
+                buttonType: 'submit',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: {
+          en: 'Reward Content Remark',
+          zh: '獎賞記錄備註',
+        },
+        path: 'admin/voucher',
+        icon: { title: 'MapIcon', sx: 'iconWhite' },
+        elements: [
+          {
+            modal: 'EditModal',
+            translateKey: 'RewardSharingContent',
+            components: [
+              {
+                key: 'brandShareContent',
+                type: 'CustomInput',
+                label: {
+                  en: 'Reward Content Remark',
+                  zh: '獎賞記錄備注',
+                },
+                grid: 12,
+                translateKey: 'RewardSharingContent',
+              },
+            ],
+            buttons: [
+              {
+                key: 'save',
+                label: {
+                  en: 'save',
+                  zh: '儲存',
+                },
+                buttonType: 'submit',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: {
+          en: 'Transition History Remark',
+          zh: '消費記錄備註',
+        },
+        path: 'admin/voucher',
+        icon: { title: 'MapIcon', sx: 'iconWhite' },
+        elements: [
+          {
+            modal: 'EditModal',
+            translateKey: 'RewardSharingContent',
+            components: [
+              {
+                key: 'TransitionHistoryRemark',
+                type: 'CustomInput',
+                label: {
+                  en: 'Transition History Remark',
+                  zh: '消費記錄備註',
+                },
+                grid: 12,
+                translateKey: 'RewardSharingContent',
+              },
+            ],
+            buttons: [
+              {
+                key: 'save',
+                label: {
+                  en: 'save',
+                  zh: '儲存',
+                },
+                buttonType: 'submit',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+};
