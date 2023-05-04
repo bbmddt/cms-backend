@@ -5,6 +5,7 @@ import { SkeletonPromote } from './data/SkeletonPromote.data';
 import { SkeletonApplication } from './data/SkeletonApplication.data';
 import { SkeletonSetting } from './data/SkeletonSetting';
 import { SkeletonMessager } from './data/SkeletonMessage.data';
+import { type } from 'os';
 
 @Injectable()
 export class SkeletonService {
@@ -24,18 +25,15 @@ export class SkeletonService {
   //   return this.skeletons.find((s) => s.style === style).skeleton;
   // }
 
-  skeletons = {
-    skeletonMaster: [
-      skeleton,
-      SkeletonApplication,
-      SkeletonPromote,
-      SkeletonMessager,
-      SkeletonSetting,
-    ],
-  };
+  private skeletons: SkeletonProps[] = [
+    skeleton,
+    SkeletonApplication,
+    SkeletonPromote,
+    SkeletonMessager,
+    SkeletonSetting,
+  ];
 
-  getAllSkeletons() {
-    console.log(typeof this.skeletons);
+  getAllSkeletons(): SkeletonProps[] {
     return this.skeletons;
   }
 
