@@ -10,8 +10,8 @@ export class SkeletonController {
     return this.skeletonService.getAllSkeletons();
   }
 
-  @Get('/:style')
-  getSkeletonByStyle(@Param('style') style: string) {
-    return this.skeletonService.getSkeletonByStyle(style);
+  @Get('/index=:index')
+  getSkeletonByIndex(@Param('index') index: number) {
+    return this.skeletonService.getSkeletonByIndex(index);
   }
 }

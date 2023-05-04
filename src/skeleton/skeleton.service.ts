@@ -8,19 +8,38 @@ import { SkeletonMessager } from './data/SkeletonMessage.data';
 
 @Injectable()
 export class SkeletonService {
-  private skeletons: { style: string; skeleton: SkeletonProps }[] = [
-    { style: 'skeleton', skeleton: skeleton },
-    { style: 'SkeletonApplication', skeleton: SkeletonApplication },
-    { style: 'SkeletonPromote', skeleton: SkeletonPromote },
-    { style: 'SkeletonMessage', skeleton: SkeletonMessager },
-    { style: 'SkeletonSetting', skeleton: SkeletonSetting },
-  ];
+  // private skeletons: { style: string; skeleton: SkeletonProps }[] = [
+  //   { style: 'skeleton', skeleton: skeleton },
+  //   { style: 'SkeletonApplication', skeleton: SkeletonApplication },
+  //   { style: 'SkeletonPromote', skeleton: SkeletonPromote },
+  //   { style: 'SkeletonMessage', skeleton: SkeletonMessager },
+  //   { style: 'SkeletonSetting', skeleton: SkeletonSetting },
+  // ];
 
-  getAllSkeletons(): SkeletonProps[] {
-    return this.skeletons.map((s) => s.skeleton);
+  // getAllSkeletons(): SkeletonProps[] {
+  //   return this.skeletons.map((s) => s.skeleton);
+  // }
+
+  // getSkeletonByStyle(style: string): SkeletonProps {
+  //   return this.skeletons.find((s) => s.style === style).skeleton;
+  // }
+
+  skeletons = {
+    skeletonMaster: [
+      skeleton,
+      SkeletonApplication,
+      SkeletonPromote,
+      SkeletonMessager,
+      SkeletonSetting,
+    ],
+  };
+
+  getAllSkeletons() {
+    console.log(typeof this.skeletons);
+    return this.skeletons;
   }
 
-  getSkeletonByStyle(style: string): SkeletonProps {
-    return this.skeletons.find((s) => s.style === style).skeleton;
+  getSkeletonByIndex(index: number): SkeletonProps {
+    return this.skeletons[index];
   }
 }
