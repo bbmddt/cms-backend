@@ -51,7 +51,7 @@ export const skeleton: SkeletonProps = {
               {
                 key: 'confirm',
                 label: {
-                  en: 'confirm',
+                  en: 'Confirm',
                   zh: '確認',
                 },
                 buttonType: 'submit',
@@ -59,7 +59,7 @@ export const skeleton: SkeletonProps = {
               {
                 key: 'reset',
                 label: {
-                  en: 'cancel',
+                  en: 'Cancel',
                   zh: '取消',
                 },
                 buttonType: 'reset',
@@ -75,16 +75,16 @@ export const skeleton: SkeletonProps = {
                 type: 'CustomTable',
                 editPath: 'admin/brand/edit/',
                 tr1: {
-                  en: 'Status',
-                  zh: '狀態',
-                },
-                tr2: {
                   en: 'Brand Code',
                   zh: '品牌編號',
                 },
-                tr3: {
+                tr2: {
                   en: 'Brand Name',
                   zh: '品牌名稱',
+                },
+                tr3: {
+                  en: 'Status',
+                  zh: '狀態',
                 },
                 tr4: {
                   en: 'Last Edit',
@@ -170,8 +170,8 @@ export const skeleton: SkeletonProps = {
                 key: 'brandID',
                 type: 'CustomSelector',
                 label: {
-                  en: 'brandID',
-                  zh: 'brandID',
+                  en: 'Brand ID',
+                  zh: '品牌 ID',
                 },
                 grid: 6,
                 translateKey: 'branch',
@@ -229,10 +229,6 @@ export const skeleton: SkeletonProps = {
                 tr4: {
                   en: 'Stock Number',
                   zh: '存貨編號',
-                },
-                tr5: {
-                  en: 'Edit',
-                  zh: '編輯',
                 },
                 grid: 12,
                 editables: true,
@@ -296,10 +292,6 @@ export const skeleton: SkeletonProps = {
                 tr2: {
                   en: 'Status',
                   zh: '狀態',
-                },
-                tr3: {
-                  en: 'Edit',
-                  zh: '編輯',
                 },
                 grid: 12,
                 editables: true,
@@ -389,10 +381,6 @@ export const skeleton: SkeletonProps = {
                 tr4: {
                   en: 'Centering',
                   zh: '中心地標',
-                },
-                tr5: {
-                  en: 'Edit',
-                  zh: '編輯',
                 },
                 grid: 12,
                 editables: true,

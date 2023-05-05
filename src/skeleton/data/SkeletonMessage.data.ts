@@ -67,7 +67,7 @@ export const SkeletonMessager: SkeletonProps = {
           en: 'Shop Sharing Content',
           zh: '店鋪分享內容',
         },
-        path: 'admin/voucher',
+        path: 'admin/store-sharing-content',
         icon: { title: 'MapIcon', sx: 'iconWhite' },
         elements: [
           {
@@ -78,7 +78,7 @@ export const SkeletonMessager: SkeletonProps = {
                 key: 'brandShareContent',
                 type: 'CustomInput',
                 label: {
-                  en: 'brand Share Content',
+                  en: 'Brand Share Content',
                   zh: '品牌分享内容',
                 },
                 grid: 12,
@@ -113,7 +113,7 @@ export const SkeletonMessager: SkeletonProps = {
           en: 'Reward Content Remark',
           zh: '獎賞記錄備註',
         },
-        path: 'admin/voucher',
+        path: 'admin/reward-history-remark',
         icon: { title: 'MapIcon', sx: 'iconWhite' },
         elements: [
           {
@@ -149,7 +149,7 @@ export const SkeletonMessager: SkeletonProps = {
           en: 'Transition History Remark',
           zh: '消費記錄備註',
         },
-        path: 'admin/voucher',
+        path: 'admin/transaction-history-remark',
         icon: { title: 'MapIcon', sx: 'iconWhite' },
         elements: [
           {

@@ -5,7 +5,6 @@ import { SkeletonPromote } from './data/SkeletonPromote.data';
 import { SkeletonApplication } from './data/SkeletonApplication.data';
 import { SkeletonSetting } from './data/SkeletonSetting';
 import { SkeletonMessager } from './data/SkeletonMessage.data';
-import { type } from 'os';
 
 @Injectable()
 export class SkeletonService {

@@ -18,9 +18,9 @@ export const SkeletonApplication: SkeletonProps = {
             components: [
               {
                 key: 't&cTitle',
-                type: 'CustomSearch',
+                type: 'CustomInput',
                 label: {
-                  en: 'contentTitle',
+                  en: 'Term & condition Title',
                   zh: '條款及細則標題',
                 },
                 grid: 12,
@@ -28,20 +28,20 @@ export const SkeletonApplication: SkeletonProps = {
               },
               {
                 key: 't&cContent',
-                type: 'CustomSearch',
+                type: 'CustomEditor',
                 label: {
-                  en: 'contentTitle',
-                  zh: '條款及細則標題',
+                  en: 'Term & condition Content',
+                  zh: '條款及細則內容',
                 },
                 grid: 12,
                 translateKey: 'tandc',
               },
               {
                 key: 'privacyPolicy',
-                type: 'CustomSearch',
+                type: 'CustomInput',
                 label: {
-                  en: 'privacyPolicy',
-                  zh: '隱私政策標題',
+                  en: 'Privacy Policy Title',
+                  zh: '私隱政策標題',
                 },
                 grid: 12,
                 translateKey: 'tandc',
@@ -50,17 +50,17 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'privacyContent',
                 type: 'CustomSearch',
                 label: {
-                  en: 'privacyPolicy',
-                  zh: '隱私政策標題',
+                  en: 'Privacy Policy Content',
+                  zh: '私隱政策內容',
                 },
                 grid: 12,
                 translateKey: 'tandc',
               },
               {
                 key: 'editBy',
-                type: 'CustomSearch',
+                type: 'CustomInput',
                 label: {
-                  en: 'editBy',
+                  en: 'Edit By',
                   zh: '更新由',
                 },
                 grid: 12,
@@ -68,9 +68,9 @@ export const SkeletonApplication: SkeletonProps = {
               },
               {
                 key: 'editFrom',
-                type: 'CustomSearch',
+                type: 'CustomInput',
                 label: {
-                  en: 'editFrom',
+                  en: 'Edit on',
                   zh: '更新於',
                 },
                 grid: 12,
@@ -92,7 +92,7 @@ export const SkeletonApplication: SkeletonProps = {
       },
       {
         title: {
-          en: 'faqCategory',
+          en: 'FAQ Category',
           zh: '常見問題種類',
         },
         path: 'admin/faq-category',
@@ -108,20 +108,20 @@ export const SkeletonApplication: SkeletonProps = {
                 type: 'CustomTable',
 
                 tr1: {
-                  en: 'faqCategory',
+                  en: 'FAQ Category',
                   zh: '常見問題種類',
                 },
                 tr2: {
-                  en: 'faqCategory',
-                  zh: '常見問題種類',
+                  en: 'Status(On/Off)',
+                  zh: '狀態(啟用/停用)',
                 },
                 tr3: {
-                  en: 'faqCategory',
-                  zh: '常見問題種類',
+                  en: 'Updated',
+                  zh: '更新於',
                 },
                 tr4: {
-                  en: 'faqCategory',
-                  zh: '常見問題種類',
+                  en: 'Edit',
+                  zh: '編輯',
                 },
                 grid: 12,
                 editables: true,
@@ -129,15 +129,15 @@ export const SkeletonApplication: SkeletonProps = {
                 operation: [
                   {
                     add: {
-                      en: 'add',
+                      en: 'Add',
                       zh: '新增',
                     },
                     sort: {
-                      en: 'sort',
+                      en: 'Sort',
                       zh: '排序',
                     },
                     delete: {
-                      en: 'delete',
+                      en: 'Delete',
                       zh: '刪除',
                     },
                   },
@@ -159,7 +159,7 @@ export const SkeletonApplication: SkeletonProps = {
       },
       {
         title: {
-          en: 'faq',
+          en: 'FAQ',
           zh: '常見問題',
         },
         path: 'admin/faq',
@@ -173,7 +173,7 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'Keyword',
                 type: 'CustomSearch',
                 label: {
-                  en: 'keyword',
+                  en: 'Keyword',
                   zh: '關鍵字',
                 },
                 grid: 12,
@@ -183,7 +183,7 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'faq-category',
                 type: 'CustomSelector',
                 label: {
-                  en: 'faqCategory',
+                  en: 'FAQ Category',
                   zh: '常見問題種類',
                 },
                 grid: 12,
@@ -194,7 +194,7 @@ export const SkeletonApplication: SkeletonProps = {
               {
                 key: 'search',
                 label: {
-                  en: 'search',
+                  en: 'Search',
                   zh: '搜尋',
                 },
                 buttonType: 'submit',
@@ -210,28 +210,24 @@ export const SkeletonApplication: SkeletonProps = {
                 type: 'CustomTable',
                 editPath: 'admin/faq/edit',
                 tr1: {
-                  en: 'faqType',
+                  en: 'FAQ Type',
                   zh: '問題種類',
                 },
                 tr2: {
-                  en: 'question',
+                  en: 'Questions',
                   zh: '問題',
                 },
                 tr3: {
-                  en: 'answer',
+                  en: 'Answer',
                   zh: '答案',
                 },
                 tr4: {
-                  en: 'faqStatus',
+                  en: 'Status(On/Off)',
                   zh: '狀態(啟用/停用)',
                 },
                 tr5: {
-                  en: 'updated',
+                  en: 'Updated',
                   zh: '更新於',
-                },
-                tr6: {
-                  en: 'edit',
-                  zh: '編輯',
                 },
                 grid: 12,
                 editables: true,
@@ -239,15 +235,15 @@ export const SkeletonApplication: SkeletonProps = {
                 operation: [
                   {
                     add: {
-                      en: 'add',
+                      en: 'Add',
                       zh: '新增',
                     },
                     sort: {
-                      en: 'sort',
+                      en: 'Sort',
                       zh: '排序',
                     },
                     delete: {
-                      en: 'delete',
+                      en: 'Delete',
                       zh: '刪除',
                     },
                   },
@@ -269,7 +265,7 @@ export const SkeletonApplication: SkeletonProps = {
       },
       {
         title: {
-          en: 'contact',
+          en: 'Contact',
           zh: '聯絡我們',
         },
         path: 'admin/contact',
@@ -283,7 +279,7 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'contactUs',
                 type: 'CustomMobile',
                 label: {
-                  en: 'contactUs',
+                  en: 'Contact Us',
                   zh: '聯絡我們',
                 },
                 grid: 12,
@@ -294,7 +290,7 @@ export const SkeletonApplication: SkeletonProps = {
               {
                 key: 'save',
                 label: {
-                  en: 'save',
+                  en: 'Save',
                   zh: '儲存',
                 },
                 buttonType: 'submit',
@@ -310,16 +306,12 @@ export const SkeletonApplication: SkeletonProps = {
                 type: 'CustomTable',
                 editPath: 'admin/contact/edit',
                 tr1: {
-                  en: 'contactTitle',
+                  en: 'Email Title',
                   zh: '電郵主題',
                 },
                 tr2: {
-                  en: 'status',
+                  en: 'Staus(On/Off)',
                   zh: '狀態(啟用/停用)',
-                },
-                tr3: {
-                  en: 'edit',
-                  zh: '編輯',
                 },
                 grid: 12,
                 editables: true,
@@ -327,15 +319,15 @@ export const SkeletonApplication: SkeletonProps = {
                 operation: [
                   {
                     add: {
-                      en: 'add',
+                      en: 'Add',
                       zh: '新增',
                     },
                     sort: {
-                      en: 'sort',
+                      en: 'Sort',
                       zh: '排序',
                     },
                     delete: {
-                      en: 'delete',
+                      en: 'Delete',
                       zh: '刪除',
                     },
                   },
@@ -346,7 +338,7 @@ export const SkeletonApplication: SkeletonProps = {
               {
                 key: 'save',
                 label: {
-                  en: 'save',
+                  en: 'Save',
                   zh: '儲存',
                 },
                 buttonType: 'submit',
@@ -357,7 +349,7 @@ export const SkeletonApplication: SkeletonProps = {
       },
       {
         title: {
-          en: 'tutorial',
+          en: 'Tutorial',
           zh: '導覽圖片',
         },
         path: 'admin/tutorial',
@@ -371,7 +363,7 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'gallery',
                 type: 'CustomImages',
                 label: {
-                  en: 'tutorial',
+                  en: 'Tutorial',
                   zh: '導覽圖片',
                 },
                 grid: 12,
@@ -382,7 +374,7 @@ export const SkeletonApplication: SkeletonProps = {
               {
                 key: 'save',
                 label: {
-                  en: 'save',
+                  en: 'Save',
                   zh: '儲存',
                 },
                 buttonType: 'submit',
@@ -393,7 +385,7 @@ export const SkeletonApplication: SkeletonProps = {
       },
       {
         title: {
-          en: 'appVersion',
+          en: 'App Version',
           zh: '強制更新',
         },
         path: 'admin/app-version',
@@ -408,23 +400,23 @@ export const SkeletonApplication: SkeletonProps = {
                 type: 'CustomTable',
                 editPath: 'admin/app-version/edit',
                 tr1: {
-                  en: 'upgradeIOSVersion',
+                  en: 'iOS Version',
                   zh: 'iOS 版本',
                 },
                 tr2: {
-                  en: 'upgradeAndroidVersion',
+                  en: 'Android Version',
                   zh: 'Android 版本',
                 },
                 tr3: {
-                  en: 'startingTime',
+                  en: 'Starting Time',
                   zh: '開始時間',
                 },
                 tr4: {
-                  en: 'endingTime',
+                  en: 'Ending Time',
                   zh: '結束時間',
                 },
                 tr5: {
-                  en: 'status',
+                  en: 'Status(On/Off)',
                   zh: '狀態(啟用/停用)',
                 },
                 grid: 12,
@@ -433,11 +425,11 @@ export const SkeletonApplication: SkeletonProps = {
                 operation: [
                   {
                     add: {
-                      en: 'add',
+                      en: 'Add',
                       zh: '新增',
                     },
                     delete: {
-                      en: 'delete',
+                      en: 'Delete',
                       zh: '刪除',
                     },
                   },
@@ -459,7 +451,7 @@ export const SkeletonApplication: SkeletonProps = {
       },
       {
         title: {
-          en: 'maintenance',
+          en: 'Maintenance',
           zh: '系統維護',
         },
         path: 'admin/maintenance',
@@ -473,7 +465,7 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'systemMaintenance',
                 type: 'CustomSwitch',
                 label: {
-                  en: 'systemMaintenance',
+                  en: 'System Maintenance',
                   zh: '系統維護',
                 },
                 grid: 3,
@@ -483,8 +475,8 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'IPBlock',
                 type: 'IPBlock',
                 label: {
-                  en: 'IPBlock',
-                  zh: 'IPBlock',
+                  en: 'IP Block',
+                  zh: '不包括 IP',
                 },
                 grid: 12,
                 translateKey: '',
@@ -493,7 +485,7 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'maintenanceContent',
                 type: 'CustomInput',
                 label: {
-                  en: 'maintenanceContent',
+                  en: 'Maintenance Content',
                   zh: '維護頁面內容',
                 },
                 grid: 12,
@@ -503,7 +495,7 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'startingTime',
                 type: 'CustomDatepicker',
                 label: {
-                  en: 'startDate',
+                  en: 'Started Date',
                   zh: '開始日期',
                 },
                 grid: 6,
@@ -513,7 +505,7 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'endingTime',
                 type: 'CustomDatepicker',
                 label: {
-                  en: 'endedDate',
+                  en: 'Ended Date',
                   zh: '結束日期',
                 },
                 grid: 6,
@@ -524,7 +516,7 @@ export const SkeletonApplication: SkeletonProps = {
               {
                 key: 'save',
                 label: {
-                  en: 'save',
+                  en: 'Save',
                   zh: '儲存',
                 },
                 buttonType: 'submit',
@@ -535,10 +527,10 @@ export const SkeletonApplication: SkeletonProps = {
       },
       {
         title: {
-          en: 'clearCache',
+          en: 'Clean Cache',
           zh: '清除快取',
         },
-        path: 'admin/clear-cache',
+        path: 'admin/clean-cache',
         icon: { title: 'MapIcon', sx: 'iconWhite' },
         elements: [
           {
@@ -549,7 +541,7 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'cleanCache',
                 type: 'CleanCache',
                 label: {
-                  en: 'clearCache',
+                  en: 'Clean Cache',
                   zh: '清除快取',
                 },
                 grid: 12,
@@ -560,7 +552,7 @@ export const SkeletonApplication: SkeletonProps = {
               {
                 key: 'save',
                 label: {
-                  en: 'save',
+                  en: 'Save',
                   zh: '儲存',
                 },
                 buttonType: 'submit',
