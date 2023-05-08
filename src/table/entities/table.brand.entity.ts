@@ -1,4 +1,9 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity()
 export class Brand {
@@ -14,6 +19,6 @@ export class Brand {
   @Column({ type: 'boolean' })
   brandStatus: boolean;
 
-  @Column({ type: 'timestamp' })
+  @UpdateDateColumn({ type: 'timestamp', default: () => 'now()' })
   modifiedDate: string;
 }

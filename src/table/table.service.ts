@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateTableBrandDto } from './dto/create-table.Brand.dto';
-import { UpdateTableDto } from './dto/update-table.dto';
+import { UpdateTableBrandDto } from './dto/update-table.Brand.dto';
 import { Brand } from './entities/table.brand.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -12,24 +12,44 @@ export class TableService {
     private brandRepository: Repository<Brand>,
   ) {}
 
-  // create(createTableDto: CreateTableDto) {
-  //   return 'This action adds a new table';
-  // }
+  async brand_create(createTableBrandDto: CreateTableBrandDto): Promise<Brand> {
+    const brand = this.brandRepository.create(createTableBrandDto);
+    await this.brandRepository.save(brand);
+    return brand;
+  }
 
   async brand_findAll(): Promise<Brand[]> {
     const brands = await this.brandRepository.find();
     return brands;
   }
 
-  // findOne(id: number) {
-  //   return `This action returns a #${id} table`;
-  // }
+  async brand_findByID(id: number): Promise<Brand> {
+    const brand = await this.brandRepository.findOne({ where: { id: id } });
 
-  // update(id: number, updateTableDto: UpdateTableDto) {
-  //   return `This action updates a #${id} table`;
-  // }
+    if (!brand) {
+      throw new NotFoundException(`Table with ID ${id} not found`);
+    }
+    return brand;
+  }
 
-  // remove(id: number) {
-  //   return `This action removes a #${id} table`;
-  // }
+  async brand_update(id: number, updateTableBrandDto: UpdateTableBrandDto) {
+    const brand = await this.brandRepository.preload({
+      id,
+      ...updateTableBrandDto,
+    });
+    if (!brand) {
+      throw new NotFoundException(`Table with ID:${id} not found`);
+    }
+
+    await this.brandRepository.save(brand);
+    return brand;
+  }
+
+  async brand_remove(id: number): Promise<void> {
+    const result = await this.brandRepository.delete({ id });
+    console.log(result.affected + ' deleted');
+    if (result.affected === 0) {
+      throw new NotFoundException(`Table with ID:${id} not found`);
+    }
+  }
 }

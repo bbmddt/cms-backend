@@ -30,6 +30,7 @@ import { TableModule } from './table/table.module';
           database: configService.get('DB_DATABASE'),
           autoLoadEntities: true,
           synchronize: true,
+          // timezone: 'Asia/Taipei',
         };
       },
     }),

@@ -1,18 +1,21 @@
-import { IsBoolean, IsNumber, IsString } from 'class-validator';
+import { IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 export class CreateTableBrandDto {
-  @IsNumber()
-  id: number;
+  // @IsNumber()
+  // id: number;
 
+  @IsNotEmpty()
   @IsNumber()
   brandCode: number;
 
+  @IsNotEmpty()
   @IsString()
   brandName: string;
 
+  @IsNotEmpty()
   @IsBoolean()
   brandStatus: boolean;
 
-  @IsString()
-  modifiedDate: string;
+  // @IsString()
+  // modifiedDate: string;
 }
