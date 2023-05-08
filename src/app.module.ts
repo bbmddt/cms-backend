@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { SkeletonModule } from './skeleton/skeleton.module';
+import { TableModule } from './table/table.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { SkeletonModule } from './skeleton/skeleton.module';
           database: configService.get('DB_DATABASE'),
           autoLoadEntities: true,
           synchronize: true,
+          // timezone: 'Asia/Taipei',
         };
       },
     }),
@@ -49,6 +51,8 @@ import { SkeletonModule } from './skeleton/skeleton.module';
     AuthModule,
 
     SkeletonModule,
+
+    TableModule,
   ],
 })
 export class AppModule {}
