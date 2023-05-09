@@ -6,11 +6,13 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { TableService } from './table.service';
 import { CreateTableBrandDto } from './dto/create-table.Brand.dto';
 import { UpdateTableBrandDto } from './dto/update-table.Brand.dto';
 import { Brand } from './entities/table.brand.entity';
+import { PaginatedData } from 'src/utils/pagination';
 
 @Controller('table')
 export class TableController {
@@ -24,8 +26,11 @@ export class TableController {
   }
 
   @Get('/brand')
-  async brand_findAll(): Promise<Brand[]> {
-    return this.tableService.brand_findAll();
+  async brand_findAll(
+    @Query('page') page = 1,
+    @Query('limit') limit = 10,
+  ): Promise<PaginatedData<Brand>> {
+    return this.tableService.brand_findAll(page, limit);
   }
 
   @Get('/brand/:id')

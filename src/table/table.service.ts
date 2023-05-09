@@ -4,6 +4,7 @@ import { UpdateTableBrandDto } from './dto/update-table.Brand.dto';
 import { Brand } from './entities/table.brand.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { PaginatedData, paginate } from '../utils/pagination';
 
 @Injectable()
 export class TableService {
@@ -18,9 +19,12 @@ export class TableService {
     return brand;
   }
 
-  async brand_findAll(): Promise<Brand[]> {
-    const brands = await this.brandRepository.find();
-    return brands;
+  async brand_findAll(
+    page: number,
+    itemsPerPage: number,
+  ): Promise<PaginatedData<Brand>> {
+    const options = { currentPage: page, itemsPerPage: itemsPerPage };
+    return await paginate<Brand>(this.brandRepository, options);
   }
 
   async brand_findByID(id: number): Promise<Brand> {
