@@ -48,7 +48,7 @@ export const SkeletonApplication: SkeletonProps = {
               },
               {
                 key: 'privacyContent',
-                type: 'CustomSearch',
+                type: 'CustomEditor',
                 label: {
                   en: 'Privacy Policy Content',
                   zh: '私隱政策內容',
