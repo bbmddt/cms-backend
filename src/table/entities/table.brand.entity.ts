@@ -21,4 +21,11 @@ export class Brand {
 
   @UpdateDateColumn({ type: 'timestamp', default: () => 'now()' })
   modifiedDate: string;
+
+  // add start and end time
+  @Column({ type: 'timestamp', nullable: true })
+  startTime: string;
+
+  @Column({ type: 'timestamp', nullable: true })
+  endTime: string;
 }

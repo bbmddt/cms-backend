@@ -16,6 +16,14 @@ export class CreateTableBrandDto {
   @IsBoolean()
   brandStatus: boolean;
 
+  @IsNotEmpty()
+  @IsString()
+  startTime: string;
+
+  @IsNotEmpty()
+  @IsString()
+  endTime: string;
+
   // @IsString()
   // modifiedDate: string;
 }
