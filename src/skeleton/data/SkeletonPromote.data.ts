@@ -144,8 +144,8 @@ export const SkeletonPromote: SkeletonProps = {
       },
       {
         title: {
-          en: 'Referral',
-          zh: '印仔卡圖案',
+          en: 'referral',
+          zh: '邀請好友',
         },
         path: 'admin/referral',
         icon: { title: 'BackupTableIcon', sx: 'iconWhite' },
@@ -230,10 +230,10 @@ export const SkeletonPromote: SkeletonProps = {
       },
       {
         title: {
-          en: 'stampCard',
-          zh: '印仔卡圖案',
+          en: 'campaign',
+          zh: '宣傳頁面',
         },
-        path: 'admin/stampCard',
+        path: 'admin/campaign',
         icon: { title: 'BackupTableIcon', sx: 'iconWhite' },
         elements: [
           {
@@ -267,6 +267,73 @@ export const SkeletonPromote: SkeletonProps = {
                 tr6: {
                   en: 'Ended On',
                   zh: '停止日期',
+                },
+                grid: 12,
+                editables: true,
+                translateKey: 'stampCard',
+                operation: [
+                  {
+                    add: {
+                      en: 'Add',
+                      zh: '新增',
+                    },
+                    delete: {
+                      en: 'Delete',
+                      zh: '刪除',
+                    },
+                  },
+                ],
+              },
+            ],
+            buttons: [
+              {
+                key: 'noBTN',
+                label: { en: '', zh: '' },
+                buttonType: undefined,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: {
+          en: 'Popup-Banner',
+          zh: '彈出式廣告',
+        },
+        path: 'admin/popup-banner',
+        icon: { title: 'BackupTableIcon', sx: 'iconWhite' },
+        elements: [
+          {
+            modal: 'TableModal',
+            translateKey: 'stampCard',
+            components: [
+              {
+                key: 'table',
+                type: 'CustomTable',
+                editPath: 'admin/popup-banner/edit/',
+                tr1: {
+                  en: 'Banner Name',
+                  zh: '名稱',
+                },
+                tr2: {
+                  en: 'Images',
+                  zh: '宣傳圖片',
+                },
+                tr3: {
+                  en: 'Status(On/Off)',
+                  zh: '狀態(啟用/停用)',
+                },
+                tr4: {
+                  en: 'Started On',
+                  zh: '開始日期',
+                },
+                tr5: {
+                  en: 'Ended On',
+                  zh: '停止日期',
+                },
+                tr6: {
+                  en: 'Main Image',
+                  zh: '主要圖片',
                 },
                 grid: 12,
                 editables: true,
