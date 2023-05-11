@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { CreateTableBrandDto } from './dto/create-table.Brand.dto';
 import { UpdateTableBrandDto } from './dto/update-table.Brand.dto';
 import { Brand } from './entities/table.brand.entity';
@@ -12,6 +16,13 @@ export class TableService {
     @InjectRepository(Brand)
     private brandRepository: Repository<Brand>,
   ) {}
+
+  //  * Validate ID parameter
+  private validateId(id: number): void {
+    if (isNaN(id) || id <= 0) {
+      throw new BadRequestException('Invalid ID parameter');
+    }
+  }
 
   async brand_create(createTableBrandDto: CreateTableBrandDto): Promise<Brand> {
     const brand = this.brandRepository.create(createTableBrandDto);
@@ -50,6 +61,8 @@ export class TableService {
   }
 
   async brand_remove(id: number): Promise<void> {
+    this.validateId(id);
+
     const result = await this.brandRepository.delete({ id });
     console.log(result.affected + ' deleted');
     if (result.affected === 0) {
