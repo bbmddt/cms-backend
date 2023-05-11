@@ -14,4 +14,9 @@ export class SkeletonController {
   getSkeletonByIndex(@Param('index') index: number) {
     return this.skeletonService.getSkeletonByIndex(index);
   }
+
+  @Get('/edit')
+  getEditpage() {
+    return this.skeletonService.getEditpage();
+  }
 }

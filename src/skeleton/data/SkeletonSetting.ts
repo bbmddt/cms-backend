@@ -9,7 +9,7 @@ export const SkeletonSetting: SkeletonProps = {
           en: 'Role-Permission',
           zh: '用戶群',
         },
-        path: 'admin/banner',
+        path: 'admin/role-permission',
         icon: { title: 'MapIcon', sx: 'iconWhite' },
         elements: [
           {
@@ -18,7 +18,7 @@ export const SkeletonSetting: SkeletonProps = {
             components: [
               {
                 key: 'RolePermission',
-                editPath: 'admin/RolePermission/edit',
+                editPath: 'admin/role-permission/edit',
                 type: 'CustomTable',
                 tr1: {
                   en: 'UserName',

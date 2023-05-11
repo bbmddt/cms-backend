@@ -8,7 +8,7 @@ export const SkeletonMessager: SkeletonProps = {
     sections: [
       {
         title: {
-          en: 'Reward Sharing Content',
+          en: 'Reward Content',
           zh: '獎賞分享内容',
         },
         path: 'admin/RewardSharingContent',
@@ -88,7 +88,7 @@ export const SkeletonMessager: SkeletonProps = {
                 key: 'ShopShareContent',
                 type: 'CustomInput',
                 label: {
-                  en: 'Shop Share Content',
+                  en: 'Shop Content',
                   zh: '店鋪分享内容',
                 },
                 grid: 12,
@@ -124,7 +124,7 @@ export const SkeletonMessager: SkeletonProps = {
                 key: 'brandShareContent',
                 type: 'CustomInput',
                 label: {
-                  en: 'Reward Content Remark',
+                  en: 'Reward Remark',
                   zh: '獎賞記錄備注',
                 },
                 grid: 12,
@@ -160,7 +160,7 @@ export const SkeletonMessager: SkeletonProps = {
                 key: 'TransitionHistoryRemark',
                 type: 'CustomInput',
                 label: {
-                  en: 'Transition History Remark',
+                  en: 'Transition Remark',
                   zh: '消費記錄備註',
                 },
                 grid: 12,

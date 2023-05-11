@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { SkeletonProps } from './skeleton.interface';
+import { Section, SkeletonProps } from './skeleton.interface';
 import { skeleton } from './data/Skeleton.data';
 import { SkeletonPromote } from './data/SkeletonPromote.data';
 import { SkeletonApplication } from './data/SkeletonApplication.data';
 import { SkeletonSetting } from './data/SkeletonSetting';
 import { SkeletonMessager } from './data/SkeletonMessage.data';
+import { editSkeleton } from './data/SkeletonEditPage.data';
 
 @Injectable()
 export class SkeletonService {
@@ -32,11 +33,17 @@ export class SkeletonService {
     SkeletonSetting,
   ];
 
+  // private editpage: Section[] = editSkeleton;
+
   getAllSkeletons(): SkeletonProps[] {
     return this.skeletons;
   }
 
   getSkeletonByIndex(index: number): SkeletonProps {
     return this.skeletons[index];
+  }
+
+  getEditpage(): Section[] {
+    return editSkeleton;
   }
 }

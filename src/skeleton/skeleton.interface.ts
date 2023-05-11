@@ -1,3 +1,4 @@
+/// **************************Skeleton All Types *************************************:
 export interface SkeletonProps {
   menu: MenuProps;
 }
@@ -10,7 +11,7 @@ export interface MenuProps {
 export interface Section {
   title: LanguageList;
   path: string;
-  icon: DynamicIconProps;
+  icon?: DynamicIconProps;
   elements: Element[];
 }
 export interface LanguageList {
@@ -19,14 +20,14 @@ export interface LanguageList {
 }
 
 export interface DynamicIconProps {
-  title: string;
+  title?: string;
   sx?: string;
 }
 
 export interface Element {
   modal: 'SearchModal' | 'EditModal' | 'TableModal' | undefined;
   components: (DynamicComponentProps | DynamicTableProps)[] | undefined;
-  translateKey: string | undefined;
+  translateKey?: string | undefined;
   buttons: Button[];
 }
 
@@ -57,8 +58,13 @@ export interface DynamicTableProps {
   sortables?: boolean;
   operation: OperationProps[];
   editPath: string;
-  data?: string;
+  // data?: Array<TableDataProps>;
+  path?: string;
 }
+
+// interface TableDataProps {
+//   data: BrandFakeData | BranchFakeData | CategoryFakeData | AreaFakeData;
+// }
 
 export interface Button {
   key: string;
