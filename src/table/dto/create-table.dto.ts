@@ -32,12 +32,16 @@ export class CreateTableBranchDto {
   branchName: string;
 
   @IsNotEmpty()
-  @IsString()
-  branchBrand: string;
-
-  @IsNotEmpty()
   @IsBoolean()
   branchStatus: boolean;
+
+  @IsNotEmpty()
+  @IsNumber()
+  stockNumber: number;
+
+  @IsNotEmpty()
+  @IsString()
+  branchBrand: string;
 
   @IsNotEmpty()
   @IsString()
