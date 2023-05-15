@@ -1,6 +1,6 @@
 import { SkeletonProps } from '../skeleton.interface';
 
-export const skeleton: SkeletonProps = {
+export const Skeleton: SkeletonProps = {
   menu: {
     title: 'FirstTitle',
     sections: [
@@ -74,21 +74,35 @@ export const skeleton: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/brand/edit/',
-                tr1: {
-                  en: 'Brand Code',
-                  zh: '品牌編號',
-                },
-                tr2: {
-                  en: 'Brand Name',
-                  zh: '品牌名稱',
-                },
-                tr3: {
-                  en: 'Status',
-                  zh: '狀態',
-                },
-                tr4: {
-                  en: 'Last Edit',
-                  zh: '上次修改日期',
+                tableList: {
+                  tr1: {
+                    key: 'brandcode',
+                    label: {
+                      en: 'Brand Code',
+                      zh: '品牌名稱',
+                    },
+                  },
+                  tr2: {
+                    key: 'brandname',
+                    label: {
+                      en: 'Brand Name',
+                      zh: '品牌名稱',
+                    },
+                  },
+                  tr3: {
+                    key: 'status',
+                    label: {
+                      en: 'Status',
+                      zh: '狀態',
+                    },
+                  },
+                  tr4: {
+                    key: 'updated at',
+                    label: {
+                      en: 'Updated At',
+                      zh: '更新於',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -214,21 +228,35 @@ export const skeleton: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/branch/edit',
-                tr1: {
-                  en: 'Product Code',
-                  zh: '商品編號',
-                },
-                tr2: {
-                  en: 'Product Name',
-                  zh: '商品名稱',
-                },
-                tr3: {
-                  en: 'Status',
-                  zh: '狀態',
-                },
-                tr4: {
-                  en: 'Stock Number',
-                  zh: '存貨編號',
+                tableList: {
+                  tr1: {
+                    key: 'branchName',
+                    label: {
+                      en: 'Branch Name',
+                      zh: '名稱',
+                    },
+                  },
+                  tr2: {
+                    key: 'branchcode',
+                    label: {
+                      en: 'Branch Code',
+                      zh: '分店編號',
+                    },
+                  },
+                  tr3: {
+                    key: 'belongbranch',
+                    label: {
+                      en: 'Belong Branch',
+                      zh: '所屬品牌',
+                    },
+                  },
+                  tr4: {
+                    key: 'status',
+                    label: {
+                      en: 'Status',
+                      zh: '狀態',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -285,13 +313,28 @@ export const skeleton: SkeletonProps = {
                 key: 'table',
                 editPath: 'admin/category/edit',
                 type: 'CustomTable',
-                tr1: {
-                  en: 'Product Name',
-                  zh: '商品名稱',
-                },
-                tr2: {
-                  en: 'Status',
-                  zh: '狀態',
+                tableList: {
+                  tr1: {
+                    key: 'cuisineid',
+                    label: {
+                      en: 'Cuisine ID',
+                      zh: 'Cuisine ID',
+                    },
+                  },
+                  tr2: {
+                    key: 'categoryname',
+                    label: {
+                      en: 'Category Name',
+                      zh: '名稱',
+                    },
+                  },
+                  tr3: {
+                    key: 'status',
+                    label: {
+                      en: 'Status',
+                      zh: '狀態',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -366,21 +409,35 @@ export const skeleton: SkeletonProps = {
                 key: 'table',
                 editPath: 'admin/area/edit',
                 type: 'CustomTable',
-                tr1: {
-                  en: 'Area ID',
-                  zh: '區域 ID',
-                },
-                tr2: {
-                  en: 'Area Name',
-                  zh: '地區名稱',
-                },
-                tr3: {
-                  en: 'Area Code',
-                  zh: '區域碼',
-                },
-                tr4: {
-                  en: 'Centering',
-                  zh: '中心地標',
+                tableList: {
+                  tr1: {
+                    key: 'uid',
+                    label: {
+                      en: 'ID',
+                      zh: 'ID',
+                    },
+                  },
+                  tr2: {
+                    key: 'area',
+                    label: {
+                      en: 'area',
+                      zh: '地區',
+                    },
+                  },
+                  tr3: {
+                    key: 'state',
+                    label: {
+                      en: 'state',
+                      zh: '區域',
+                    },
+                  },
+                  tr4: {
+                    key: 'landmark',
+                    label: {
+                      en: 'Landmark Of CenterPointer',
+                      zh: '中心點地標',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,

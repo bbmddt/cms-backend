@@ -20,29 +20,49 @@ export const SkeletonPromote: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/banner/edit/',
-                tr1: {
-                  en: 'Subject',
-                  zh: '狀態',
-                },
-                tr2: {
-                  en: 'Promo ID',
-                  zh: '推廣 ID',
-                },
-                tr3: {
-                  en: 'Banner Image',
-                  zh: '橫額圖片',
-                },
-                tr4: {
-                  en: 'Started On',
-                  zh: '開始日期',
-                },
-                tr5: {
-                  en: 'Ended On',
-                  zh: '結束日期',
-                },
-                tr6: {
-                  en: 'Status(On/Off)',
-                  zh: '狀態 (啟用/停用)',
+                tableList: {
+                  tr1: {
+                    key: 'internaltitle',
+                    label: {
+                      en: 'Internal Title',
+                      zh: 'Internal 標題',
+                    },
+                  },
+                  tr2: {
+                    key: 'promotionid',
+                    label: {
+                      en: 'Promotion ID',
+                      zh: 'Promotion ID',
+                    },
+                  },
+                  tr3: {
+                    key: 'bannerimage',
+                    label: {
+                      en: 'Banner Image',
+                      zh: '橫額圖片',
+                    },
+                  },
+                  tr4: {
+                    key: 'startdate',
+                    label: {
+                      en: 'Start On',
+                      zh: '開始日期',
+                    },
+                  },
+                  tr5: {
+                    key: 'enddate',
+                    label: {
+                      en: 'Ended To',
+                      zh: '結束日期',
+                    },
+                  },
+                  tr6: {
+                    key: 'status',
+                    label: {
+                      en: 'Status(On/Off)',
+                      zh: '狀態 (啟用/停用)',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -91,25 +111,42 @@ export const SkeletonPromote: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/stampCard/edit/',
-                tr1: {
-                  en: 'Stamp Color',
-                  zh: '印仔顏色',
-                },
-                tr2: {
-                  en: 'Stamp Image',
-                  zh: '禮物圖案',
-                },
-                tr3: {
-                  en: 'Started On',
-                  zh: '開始日期',
-                },
-                tr4: {
-                  en: 'Ended On',
-                  zh: '結束日期',
-                },
-                tr5: {
-                  en: 'Status(On/Off)',
-                  zh: '狀態 (啟用/停用)',
+                tableList: {
+                  tr1: {
+                    key: 'colorPicker',
+                    label: {
+                      en: 'Coupon Color',
+                      zh: '印仔顔色',
+                    },
+                  },
+                  tr2: {
+                    key: 'giftImage',
+                    label: {
+                      en: 'Gift Image',
+                      zh: '禮物圖案',
+                    },
+                  },
+                  tr3: {
+                    key: 'startdate',
+                    label: {
+                      en: 'Start On',
+                      zh: '開始日期',
+                    },
+                  },
+                  tr4: {
+                    key: 'enddate',
+                    label: {
+                      en: 'Ended To',
+                      zh: '結束日期',
+                    },
+                  },
+                  tr5: {
+                    key: 'status',
+                    label: {
+                      en: 'Status(On/Off)',
+                      zh: '狀態 (啟用/停用)',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -184,18 +221,29 @@ export const SkeletonPromote: SkeletonProps = {
               {
                 key: 'table',
                 type: 'CustomTable',
-                editPath: 'admin/stampCard/edit/',
-                tr1: {
-                  en: 'Name',
-                  zh: '印仔顏色',
-                },
-                tr2: {
-                  en: 'Template',
-                  zh: '禮物圖案',
-                },
-                tr3: {
-                  en: 'Status(On/Off)',
-                  zh: '開始日期',
+                editPath: 'admin/referral/edit/',
+                tableList: {
+                  tr1: {
+                    key: 'referralname',
+                    label: {
+                      en: 'Referral Name',
+                      zh: '名稱',
+                    },
+                  },
+                  tr2: {
+                    key: 'modal',
+                    label: {
+                      en: 'Modal',
+                      zh: '模板',
+                    },
+                  },
+                  tr3: {
+                    key: 'status',
+                    label: {
+                      en: 'Status(On/Off)',
+                      zh: '狀態 (啟用/停用)',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -244,29 +292,49 @@ export const SkeletonPromote: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/stampCard/edit/',
-                tr1: {
-                  en: 'Campaign ID',
-                  zh: '活動 ID',
-                },
-                tr2: {
-                  en: 'Internal Subject',
-                  zh: '內部標題',
-                },
-                tr3: {
-                  en: 'Subject',
-                  zh: '標題',
-                },
-                tr4: {
-                  en: 'Status(On/Off)',
-                  zh: '狀態(啟用/停用)',
-                },
-                tr5: {
-                  en: 'Started On',
-                  zh: '開始日期',
-                },
-                tr6: {
-                  en: 'Ended On',
-                  zh: '停止日期',
+                tableList: {
+                  tr1: {
+                    key: 'campaignid',
+                    label: {
+                      en: 'Campaign ID',
+                      zh: '活動 ID',
+                    },
+                  },
+                  tr2: {
+                    key: 'internaltitle',
+                    label: {
+                      en: 'Internal Title',
+                      zh: 'Internal 標題',
+                    },
+                  },
+                  tr3: {
+                    key: 'maintitle',
+                    label: {
+                      en: 'Main Title',
+                      zh: '標題',
+                    },
+                  },
+                  tr4: {
+                    key: 'status',
+                    label: {
+                      en: 'Status(On/Off)',
+                      zh: '狀態 (啟用/停用)',
+                    },
+                  },
+                  tr5: {
+                    key: 'startdate',
+                    label: {
+                      en: 'Start On',
+                      zh: '開始日期',
+                    },
+                  },
+                  tr6: {
+                    key: 'enddate',
+                    label: {
+                      en: 'Ended To',
+                      zh: '結束日期',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -311,29 +379,49 @@ export const SkeletonPromote: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/popup-banner/edit/',
-                tr1: {
-                  en: 'Banner Name',
-                  zh: '名稱',
-                },
-                tr2: {
-                  en: 'Images',
-                  zh: '宣傳圖片',
-                },
-                tr3: {
-                  en: 'Status(On/Off)',
-                  zh: '狀態(啟用/停用)',
-                },
-                tr4: {
-                  en: 'Started On',
-                  zh: '開始日期',
-                },
-                tr5: {
-                  en: 'Ended On',
-                  zh: '停止日期',
-                },
-                tr6: {
-                  en: 'Main Image',
-                  zh: '主要圖片',
+                tableList: {
+                  tr1: {
+                    key: 'popupname',
+                    label: {
+                      en: 'PopUp Banner Name',
+                      zh: '名稱',
+                    },
+                  },
+                  tr2: {
+                    key: 'popupimage',
+                    label: {
+                      en: 'Popup Image',
+                      zh: '宣傳圖片',
+                    },
+                  },
+                  tr3: {
+                    key: 'status',
+                    label: {
+                      en: 'Status(On/Off)',
+                      zh: '狀態 (啟用/停用)',
+                    },
+                  },
+                  tr4: {
+                    key: 'startdate',
+                    label: {
+                      en: 'Start On',
+                      zh: '開始日期',
+                    },
+                  },
+                  tr5: {
+                    key: 'enddate',
+                    label: {
+                      en: 'Ended To',
+                      zh: '結束日期',
+                    },
+                  },
+                  tr6: {
+                    key: 'setmainimages',
+                    label: {
+                      en: 'Active Main Images',
+                      zh: '主要圖片',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,

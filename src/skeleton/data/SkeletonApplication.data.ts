@@ -106,22 +106,28 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'table',
                 editPath: 'admin/faq-category/edit',
                 type: 'CustomTable',
-
-                tr1: {
-                  en: 'FAQ Category',
-                  zh: '常見問題種類',
-                },
-                tr2: {
-                  en: 'Status(On/Off)',
-                  zh: '狀態(啟用/停用)',
-                },
-                tr3: {
-                  en: 'Updated',
-                  zh: '更新於',
-                },
-                tr4: {
-                  en: 'Edit',
-                  zh: '編輯',
+                tableList: {
+                  tr1: {
+                    key: 'faqCategory',
+                    label: {
+                      en: 'FAQ Category',
+                      zh: '常見問題種類',
+                    },
+                  },
+                  tr2: {
+                    key: 'status',
+                    label: {
+                      en: 'Status(On/Off)',
+                      zh: '狀態 (啟用/停用)',
+                    },
+                  },
+                  tr3: {
+                    key: 'updated at',
+                    label: {
+                      en: 'Updated At',
+                      zh: '更新於',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -209,25 +215,42 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/faq/edit',
-                tr1: {
-                  en: 'FAQ Type',
-                  zh: '問題種類',
-                },
-                tr2: {
-                  en: 'Questions',
-                  zh: '問題',
-                },
-                tr3: {
-                  en: 'Answer',
-                  zh: '答案',
-                },
-                tr4: {
-                  en: 'Status(On/Off)',
-                  zh: '狀態(啟用/停用)',
-                },
-                tr5: {
-                  en: 'Updated',
-                  zh: '更新於',
+                tableList: {
+                  tr1: {
+                    key: 'faqCategory',
+                    label: {
+                      en: 'FAQ Category',
+                      zh: '常見問題種類',
+                    },
+                  },
+                  tr2: {
+                    key: 'question',
+                    label: {
+                      en: 'Question',
+                      zh: '問題',
+                    },
+                  },
+                  tr3: {
+                    key: 'answer',
+                    label: {
+                      en: 'Answer',
+                      zh: '答案',
+                    },
+                  },
+                  tr4: {
+                    key: 'status',
+                    label: {
+                      en: 'Status',
+                      zh: '狀態',
+                    },
+                  },
+                  tr5: {
+                    key: 'updated at',
+                    label: {
+                      en: 'Updated At',
+                      zh: '更新於',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -305,13 +328,21 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/contact/edit',
-                tr1: {
-                  en: 'Email Title',
-                  zh: '電郵主題',
-                },
-                tr2: {
-                  en: 'Staus(On/Off)',
-                  zh: '狀態(啟用/停用)',
+                tableList: {
+                  tr1: {
+                    key: 'emailtitle',
+                    label: {
+                      en: 'Email Title',
+                      zh: '電郵主題',
+                    },
+                  },
+                  tr2: {
+                    key: 'status',
+                    label: {
+                      en: 'Status',
+                      zh: '狀態',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -399,25 +430,56 @@ export const SkeletonApplication: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/app-version/edit',
-                tr1: {
-                  en: 'iOS Version',
-                  zh: 'iOS 版本',
-                },
-                tr2: {
-                  en: 'Android Version',
-                  zh: 'Android 版本',
-                },
-                tr3: {
-                  en: 'Starting Time',
-                  zh: '開始時間',
-                },
-                tr4: {
-                  en: 'Ending Time',
-                  zh: '結束時間',
-                },
-                tr5: {
-                  en: 'Status(On/Off)',
-                  zh: '狀態(啟用/停用)',
+                tableList: {
+                  tr1: {
+                    key: 'iosversion',
+                    label: {
+                      en: 'IOS Version',
+                      zh: 'IOS版本',
+                    },
+                  },
+                  tr2: {
+                    key: 'IOS',
+                    label: {
+                      en: 'IOS Force update',
+                      zh: 'IOS強制更新',
+                    },
+                  },
+                  tr3: {
+                    key: 'androidversion',
+                    label: {
+                      en: 'Android Version',
+                      zh: 'Android版本',
+                    },
+                  },
+                  tr4: {
+                    key: 'android',
+                    label: {
+                      en: 'Android Force Update',
+                      zh: 'Android強制更新',
+                    },
+                  },
+                  tr5: {
+                    key: 'startdate',
+                    label: {
+                      en: 'Start On',
+                      zh: '開始日期',
+                    },
+                  },
+                  tr6: {
+                    key: 'enddate',
+                    label: {
+                      en: 'Ended To',
+                      zh: '結束日期',
+                    },
+                  },
+                  tr7: {
+                    key: 'status',
+                    label: {
+                      en: 'Status(On/Off)',
+                      zh: '狀態 (啟用/停用)',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,

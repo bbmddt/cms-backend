@@ -48,16 +48,16 @@ export const editSkeleton: Section[] = [
             grid: 1,
           },
           {
-            key: 'brandName',
+            key: 'brandname',
             type: 'CustomInput',
             label: {
-              en: 'brandName',
+              en: 'Brand Name',
               zh: '品牌名稱',
             },
             grid: 12,
           },
           {
-            key: 'brandCode',
+            key: 'brandcode',
             type: 'CustomInput',
             label: {
               en: 'brandCode',
@@ -207,7 +207,7 @@ export const editSkeleton: Section[] = [
             grid: 2,
           },
           {
-            key: 'branchName',
+            key: 'branchname',
             type: 'CustomInput',
             label: {
               en: 'Branch Name',
@@ -216,16 +216,16 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'branchCode',
+            key: 'branchcode',
             type: 'CustomInput',
             label: {
-              en: 'branchCode',
+              en: 'Branch Code',
               zh: '分店編號',
             },
             grid: 6,
           },
           {
-            key: 'lineupID',
+            key: 'lineupid',
             type: 'CustomInput',
             label: {
               en: 'LineUp ID',
@@ -234,7 +234,7 @@ export const editSkeleton: Section[] = [
             grid: 6,
           },
           {
-            key: 'belongBranch',
+            key: 'belongbranch',
             type: 'CustomSelector',
             label: {
               en: 'Belong Branch',
@@ -297,7 +297,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'lineupEndpoint',
+            key: 'lineupendpoint',
             type: 'CustomInput',
             label: {
               en: 'lineupEndpoint',
@@ -306,7 +306,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'reserveEndpoint',
+            key: 'reserveendpoint',
             type: 'CustomInput',
             label: {
               en: 'Reserve Endpoint',
@@ -315,7 +315,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'orderEndpoint',
+            key: 'orderendpoint',
             type: 'CustomInput',
             label: {
               en: 'orderEndpoint',
@@ -383,6 +383,7 @@ export const editSkeleton: Section[] = [
         modal: 'EditModal',
         components: [
           {
+            // skeletonBone Table requesting UID, please return UID on DB
             key: 'status',
             type: 'CustomSwitch',
             label: {
@@ -392,10 +393,10 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'branchName',
+            key: 'categoryname',
             type: 'CustomInput',
             label: {
-              en: 'Product Name',
+              en: 'Category Name',
               zh: '名稱',
             },
             grid: 12,
@@ -433,6 +434,7 @@ export const editSkeleton: Section[] = [
         modal: 'EditModal',
         components: [
           {
+            // skeletonBone Table requesting UID, please return UID on DB
             key: 'area',
             type: 'CustomInput',
             label: {
@@ -454,7 +456,7 @@ export const editSkeleton: Section[] = [
             key: 'landmark',
             type: 'CustomInput',
             label: {
-              en: 'landmark of center pointer',
+              en: 'Landmark Of CenterPointer',
               zh: '中心點地標',
             },
             grid: 12,
@@ -572,7 +574,7 @@ export const editSkeleton: Section[] = [
             key: 'question',
             type: 'CustomInput',
             label: {
-              en: 'question',
+              en: 'Question',
               zh: '問題',
             },
             grid: 12,
@@ -581,7 +583,7 @@ export const editSkeleton: Section[] = [
             key: 'answer',
             type: 'CustomEditor',
             label: {
-              en: 'answer',
+              en: 'Answer',
               zh: '答案',
             },
             grid: 12,
@@ -628,7 +630,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'emailTitle',
+            key: 'emailtitle',
             type: 'CustomInput',
             label: {
               en: 'Email Title',
@@ -687,7 +689,7 @@ export const editSkeleton: Section[] = [
             grid: 1,
           },
           {
-            key: 'Android',
+            key: 'android',
             type: 'CustomSwitch',
             label: {
               en: 'Android Force Update',
@@ -705,7 +707,7 @@ export const editSkeleton: Section[] = [
             grid: 6,
           },
           {
-            key: 'androidVersion',
+            key: 'androidversion',
             type: 'CustomInput',
             label: {
               en: 'Android Version',
@@ -812,8 +814,8 @@ export const editSkeleton: Section[] = [
             key: 'connectionid',
             type: 'CustomInput',
             label: {
-              en: 'Connection Type',
-              zh: '連結種類',
+              en: 'Connection ID',
+              zh: '連結ID',
             },
             grid: 12,
           },
@@ -1058,6 +1060,7 @@ export const editSkeleton: Section[] = [
         modal: 'EditModal',
         components: [
           {
+            // refer back Promote Skeleton seems have to pass UID
             key: 'status',
             type: 'CustomSwitch',
             label: {
@@ -1420,7 +1423,7 @@ export const editSkeleton: Section[] = [
           },
           {
             key: 'giftlist',
-            type: 'CustomSwitch',
+            type: 'CustomGift',
             label: {
               en: 'giftlist',
               zh: 'giftlist',

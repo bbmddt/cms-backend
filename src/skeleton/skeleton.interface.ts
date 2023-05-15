@@ -42,14 +42,7 @@ export interface DynamicComponentProps {
 export interface DynamicTableProps {
   key: string;
   type: string;
-  tr1: LanguageList;
-  tr2: LanguageList;
-  tr3?: LanguageList;
-  tr4?: LanguageList;
-  tr5?: LanguageList;
-  tr6?: LanguageList;
-  tr7?: LanguageList;
-  tr8?: LanguageList;
+  tableList: TableListSkeletonProps;
   grid?: number;
   translateKey?: string;
   editables?: boolean;
@@ -60,6 +53,22 @@ export interface DynamicTableProps {
   editPath: string;
   // data?: Array<TableDataProps>;
   path?: string;
+}
+
+export interface TableListSkeletonProps {
+  tr1: tableTitleProps;
+  tr2: tableTitleProps;
+  tr3?: tableTitleProps;
+  tr4?: tableTitleProps;
+  tr5?: tableTitleProps;
+  tr6?: tableTitleProps;
+  tr7?: tableTitleProps;
+  tr8?: tableTitleProps;
+}
+
+interface tableTitleProps {
+  key: string;
+  label: LanguageList;
 }
 
 // interface TableDataProps {

@@ -20,13 +20,21 @@ export const SkeletonSetting: SkeletonProps = {
                 key: 'RolePermission',
                 editPath: 'admin/role-permission/edit',
                 type: 'CustomTable',
-                tr1: {
-                  en: 'UserName',
-                  zh: '用戶名',
-                },
-                tr2: {
-                  en: 'Status',
-                  zh: '狀態',
+                tableList: {
+                  tr1: {
+                    key: 'usergroup',
+                    label: {
+                      en: 'User Group',
+                      zh: '用戶群名稱',
+                    },
+                  },
+                  tr2: {
+                    key: 'status',
+                    label: {
+                      en: 'status',
+                      zh: '狀態',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
@@ -120,25 +128,42 @@ export const SkeletonSetting: SkeletonProps = {
                 key: 'table',
                 type: 'CustomTable',
                 editPath: 'admin/accounts/edit/',
-                tr1: {
-                  en: 'Name',
-                  zh: '名稱',
-                },
-                tr2: {
-                  en: 'Email',
-                  zh: '電子郵件',
-                },
-                tr3: {
-                  en: 'Brand Code',
-                  zh: '品牌組織',
-                },
-                tr4: {
-                  en: 'All User',
-                  zh: '用戶群',
-                },
-                tr5: {
-                  en: 'status',
-                  zh: '狀態',
+                tableList: {
+                  tr1: {
+                    key: 'username',
+                    label: {
+                      en: 'User Name',
+                      zh: '名稱',
+                    },
+                  },
+                  tr2: {
+                    key: 'useremail',
+                    label: {
+                      en: 'User Email',
+                      zh: '電子郵件',
+                    },
+                  },
+                  tr3: {
+                    key: 'userbrandgroup',
+                    label: {
+                      en: 'User Brand Group',
+                      zh: '品牌組織',
+                    },
+                  },
+                  tr4: {
+                    key: 'usergroup',
+                    label: {
+                      en: 'User Group',
+                      zh: '用戶群',
+                    },
+                  },
+                  tr5: {
+                    key: 'status',
+                    label: {
+                      en: 'status',
+                      zh: '狀態',
+                    },
+                  },
                 },
                 grid: 12,
                 editables: true,
