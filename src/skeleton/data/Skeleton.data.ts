@@ -295,7 +295,7 @@ export const skeleton: SkeletonProps = {
                 },
                 grid: 12,
                 editables: true,
-                translateKey: 'branch',
+                translateKey: 'category',
                 operation: [
                   {
                     add: {
@@ -384,7 +384,7 @@ export const skeleton: SkeletonProps = {
                 },
                 grid: 12,
                 editables: true,
-                translateKey: 'branch',
+                translateKey: 'area',
                 operation: [
                   {
                     add: {
