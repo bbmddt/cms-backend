@@ -801,6 +801,15 @@ export const editSkeleton: Section[] = [
           },
           {
             key: 'connectiontype',
+            type: 'CustomSelector',
+            label: {
+              en: 'Connection Type',
+              zh: '連結種類',
+            },
+            grid: 12,
+          },
+          {
+            key: 'connectionid',
             type: 'CustomInput',
             label: {
               en: 'Connection Type',
@@ -827,11 +836,11 @@ export const editSkeleton: Section[] = [
             grid: 6,
           },
           {
-            key: 'date',
+            key: 'bannerimage',
             type: 'CustomImages',
             label: {
-              en: 'date',
-              zh: 'date',
+              en: 'bannerimage',
+              zh: 'bannerimage',
             },
             grid: 12,
           },
@@ -877,7 +886,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'internaltitle',
+            key: 'colorPicker',
             type: 'CustomColorPicker',
             label: {
               en: 'Coupon Color',
@@ -954,10 +963,10 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'name',
+            key: 'referralname',
             type: 'CustomInput',
             label: {
-              en: 'Nick Name',
+              en: 'Referral Name',
               zh: '名稱',
             },
             grid: 12,
@@ -972,10 +981,10 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'Image',
+            key: 'referralimage',
             type: 'CustomImages',
             label: {
-              en: 'Image',
+              en: 'Referral Image',
               zh: '圖片',
             },
             grid: 12,
@@ -1067,7 +1076,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'MainTitle',
+            key: 'maintitle',
             type: 'CustomInput',
             label: {
               en: 'Main Title',
@@ -1076,34 +1085,34 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'subTitle',
+            key: 'subtitle',
             type: 'CustomInput',
             label: {
-              en: 'SubTitle',
+              en: 'Sub Title',
               zh: '副標題',
             },
             grid: 12,
           },
           {
-            key: 'Image',
+            key: 'campaignimage',
             type: 'CustomImages',
             label: {
-              en: 'Image',
+              en: 'Campaign Image',
               zh: '圖片',
             },
             grid: 12,
           },
           {
-            key: 'brand',
+            key: 'campaignbrand',
             type: 'CustomInput',
             label: {
-              en: 'Brand',
+              en: 'Campaign Brand',
               zh: '品牌',
             },
             grid: 12,
           },
           {
-            key: 'content',
+            key: 'campaigncontent',
             type: 'CustomEditor',
             label: {
               en: 'Content',
@@ -1112,7 +1121,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'CTA',
+            key: 'cta',
             type: 'CustomInput',
             label: {
               en: 'CTA',
@@ -1198,16 +1207,16 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'name',
+            key: 'popupname',
             type: 'CustomInput',
             label: {
-              en: 'Banner Name',
+              en: 'PopUp Banner Name',
               zh: '名稱',
             },
             grid: 12,
           },
           {
-            key: 'connection',
+            key: 'popupconnection',
             type: 'CustomInput',
             label: {
               en: 'Link to ',
@@ -1216,7 +1225,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'connectionID',
+            key: 'connectionid',
             type: 'CustomInput',
             label: {
               en: 'Connection ID',
@@ -1243,19 +1252,19 @@ export const editSkeleton: Section[] = [
             grid: 6,
           },
           {
-            key: 'bannerImage',
+            key: 'popupimage',
             type: 'CustomImages',
             label: {
-              en: 'Banner Images',
+              en: 'PopUp Banner Images',
               zh: '橫額圖片',
             },
             grid: 12,
           },
           {
-            key: 'MainImages',
+            key: 'setmainimages',
             type: 'CustomSwitch',
             label: {
-              en: 'Main Images',
+              en: 'Set as Main Images',
               zh: '主要圖片',
             },
             grid: 12,
@@ -1285,7 +1294,7 @@ export const editSkeleton: Section[] = [
   {
     title: {
       en: 'Event Management',
-      zh: '幸運抽獎管理',
+      zh: '幸運抽獎宣傳',
     },
     path: 'admin/event/edit',
     elements: [
@@ -1302,7 +1311,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'name',
+            key: 'eventname',
             type: 'CustomInput',
             label: {
               en: 'Event Name',
@@ -1311,31 +1320,13 @@ export const editSkeleton: Section[] = [
             grid: 6,
           },
           {
-            key: 'nameEN',
+            key: 'eventnameEN',
             type: 'CustomInput',
             label: {
               en: 'Event Name(EN)',
               zh: '名稱(EN)',
             },
             grid: 6,
-          },
-          {
-            key: 'connection',
-            type: 'CustomInput',
-            label: {
-              en: 'Link to ',
-              zh: '頁面指向',
-            },
-            grid: 12,
-          },
-          {
-            key: 'connectionID',
-            type: 'CustomInput',
-            label: {
-              en: 'Connection ID',
-              zh: '連接ID',
-            },
-            grid: 12,
           },
           {
             key: 'startdate',
@@ -1356,20 +1347,205 @@ export const editSkeleton: Section[] = [
             grid: 6,
           },
           {
-            key: 'bannerImage',
+            key: 'eventlicensecode',
+            type: 'CustomInput',
+            label: {
+              en: 'Event License Code',
+              zh: '推廣生意的競賽牌照號碼',
+            },
+            grid: 6,
+          },
+          {
+            key: 'siteip',
+            type: 'CustomInput',
+            label: {
+              en: 'Site IP',
+              zh: 'Site IP',
+            },
+            grid: 6,
+          },
+          {
+            key: 'authtoken',
+            type: 'CustomInput',
+            label: {
+              en: 'Auth Token',
+              zh: 'Auth Token',
+            },
+            grid: 9,
+          },
+          {
+            key: 'tandc',
+            type: 'CustomInput',
+            label: {
+              en: 'Terms and Conditions',
+              zh: '條款及細則',
+            },
+            grid: 6,
+          },
+          {
+            key: 'tandcen',
+            type: 'CustomInput',
+            label: {
+              en: 'Terms and Conditions(EN)',
+              zh: '條款及細則(EN)',
+            },
+            grid: 6,
+          },
+          {
+            key: 'bannerimage',
             type: 'CustomImages',
             label: {
               en: 'Banner Images',
               zh: '橫額圖片',
             },
+            grid: 4,
+          },
+          {
+            key: 'backgroundimage',
+            type: 'CustomImages',
+            label: {
+              en: 'Background Images',
+              zh: '背景相片',
+            },
+            grid: 4,
+          },
+          {
+            key: 'logoimage',
+            type: 'CustomImages',
+            label: {
+              en: 'Logo Images',
+              zh: 'Logo相片',
+            },
+            grid: 4,
+          },
+          {
+            key: 'giftlist',
+            type: 'CustomSwitch',
+            label: {
+              en: 'giftlist',
+              zh: 'giftlist',
+            },
+            grid: 12,
+          },
+        ],
+        buttons: [
+          {
+            key: 'save',
+            buttonType: 'submit',
+            label: {
+              en: 'save',
+              zh: '儲存',
+            },
+          },
+          {
+            key: 'cancel',
+            buttonType: 'reset',
+            label: {
+              en: 'cancel',
+              zh: '取消',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: {
+      en: 'USER Information',
+      zh: '用戶資料',
+    },
+    path: 'admin/account/edit',
+    elements: [
+      {
+        modal: 'SearchModal',
+        components: [
+          {
+            key: 'userid',
+            type: 'CustomInput',
+            label: {
+              en: 'User Id',
+              zh: '編號',
+            },
             grid: 12,
           },
           {
-            key: 'MainImages',
+            key: 'userstatus',
             type: 'CustomSwitch',
             label: {
-              en: 'Main Images',
-              zh: '主要圖片',
+              en: 'User Status',
+              zh: '狀態',
+            },
+            grid: 12,
+          },
+          {
+            key: 'username',
+            type: 'CustomInput',
+            label: {
+              en: 'User Name',
+              zh: '名稱',
+            },
+            grid: 12,
+          },
+          {
+            key: 'useremail',
+            type: 'CustomInput',
+            label: {
+              en: 'User Email',
+              zh: '電子郵件',
+            },
+            grid: 12,
+          },
+          {
+            key: 'usergroup',
+            type: 'CustomSelector',
+            label: {
+              en: 'User Group',
+              zh: '用戶群',
+            },
+            grid: 12,
+          },
+          {
+            key: 'userpassword',
+            type: 'CustomInput',
+            label: {
+              en: 'User Password',
+              zh: '密碼',
+            },
+            grid: 12,
+          },
+          {
+            key: 'userpasswordconfrim',
+            type: 'CustomInput',
+            label: {
+              en: 'User Password Confirm',
+              zh: '確認密碼',
+            },
+            grid: 12,
+          },
+          {
+            key: 'userbrandgroup',
+            type: 'CustomSelector',
+            label: {
+              en: 'User Brand Group',
+              zh: '品牌組織',
+            },
+            grid: 12,
+          },
+          {
+            key: 'usercreatedate',
+            type: 'CustomInput',
+            label: {
+              en: 'User Create Date',
+              zh: '創建於',
+            },
+            grid: 12,
+          },
+          {
+            key: 'userlastedit',
+            type: 'CustomInput',
+            label: {
+              en: 'User Last Edited',
+              zh: '更新於',
             },
             grid: 12,
           },
@@ -1400,7 +1576,7 @@ export const editSkeleton: Section[] = [
       en: '',
       zh: '',
     },
-    path: 'admin/role-permission/edit',
+    path: 'admin/popup-banner/edit',
     elements: [
       {
         modal: 'EditModal',
@@ -1415,25 +1591,16 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'name',
+            key: 'popupname',
             type: 'CustomInput',
             label: {
-              en: 'Event Name',
+              en: 'PopUp Banner Name',
               zh: '名稱',
             },
-            grid: 6,
+            grid: 12,
           },
           {
-            key: 'nameEN',
-            type: 'CustomInput',
-            label: {
-              en: 'Event Name(EN)',
-              zh: '名稱(EN)',
-            },
-            grid: 6,
-          },
-          {
-            key: 'connection',
+            key: 'popupconnection',
             type: 'CustomInput',
             label: {
               en: 'Link to ',
@@ -1442,7 +1609,7 @@ export const editSkeleton: Section[] = [
             grid: 12,
           },
           {
-            key: 'connectionID',
+            key: 'connectionid',
             type: 'CustomInput',
             label: {
               en: 'Connection ID',
@@ -1469,19 +1636,19 @@ export const editSkeleton: Section[] = [
             grid: 6,
           },
           {
-            key: 'bannerImage',
+            key: 'popupimage',
             type: 'CustomImages',
             label: {
-              en: 'Banner Images',
+              en: 'PopUp Banner Images',
               zh: '橫額圖片',
             },
             grid: 12,
           },
           {
-            key: 'MainImages',
+            key: 'setmainimages',
             type: 'CustomSwitch',
             label: {
-              en: 'Main Images',
+              en: 'Set as Main Images',
               zh: '主要圖片',
             },
             grid: 12,
