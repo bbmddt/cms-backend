@@ -8,12 +8,14 @@ import {
   CreateTableBrandDto,
   CreateTableCategoryDto,
   CreateTableAreaDto,
+  CreateTablefaqCategoryDto,
 } from './dto/create-table.dto';
 import {
   UpdateTableBranchDto,
   UpdateTableBrandDto,
   UpdateTableCategoryDto,
   UpdateTableAreaDto,
+  UpdateTablefaqCategoryDto,
 } from './dto/update-table.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -22,6 +24,8 @@ import { Branch } from './entities/table.branch.entity';
 import { Category } from './entities/table.category.entity';
 import { Area } from './entities/table.area.entity';
 import { PaginatedData, paginate } from '../utils/pagination';
+import { faqCategory } from './entities/table.faqCategory.entity';
+import { BaseService } from './table.repository';
 
 @Injectable()
 export class TableService {
@@ -236,5 +240,16 @@ export class TableService {
     if (result.affected === 0) {
       throw new NotFoundException(`Area with ID ${id} not found`);
     }
+  }
+}
+
+@Injectable()
+export class faqCategoryRepository extends BaseService<
+  faqCategory,
+  CreateTablefaqCategoryDto,
+  UpdateTablefaqCategoryDto
+> {
+  constructor(private readonly faqCategoryRepository: Repository<faqCategory>) {
+    super(faqCategoryRepository);
   }
 }

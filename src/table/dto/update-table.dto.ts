@@ -4,6 +4,7 @@ import {
   CreateTableBranchDto,
   CreateTableBrandDto,
   CreateTableCategoryDto,
+  CreateTablefaqCategoryDto,
 } from './create-table.dto';
 
 export class UpdateTableBrandDto extends PartialType(CreateTableBrandDto) {}
@@ -12,3 +13,6 @@ export class UpdateTableCategoryDto extends PartialType(
   CreateTableCategoryDto,
 ) {}
 export class UpdateTableAreaDto extends PartialType(CreateTableAreaDto) {}
+export class UpdateTablefaqCategoryDto extends PartialType(
+  CreateTablefaqCategoryDto,
+) {}

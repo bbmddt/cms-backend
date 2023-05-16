@@ -32,7 +32,6 @@ export class TableController {
   constructor(private readonly tableService: TableService) {}
 
   // *********************** Brand Controller ***********************
-
   @Post('/brand')
   brand_create(
     @Body() createTableBrandDto: CreateTableBrandDto,

@@ -1,4 +1,5 @@
 import { IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import exp from 'constants';
 
 export class CreateTableBrandDto {
   @IsNotEmpty()
@@ -82,6 +83,24 @@ export class CreateTableAreaDto {
   @IsNotEmpty()
   @IsString()
   areaCentering: string;
+
+  @IsNotEmpty()
+  @IsString()
+  startTime: string;
+
+  @IsNotEmpty()
+  @IsString()
+  endTime: string;
+}
+
+export class CreateTablefaqCategoryDto {
+  @IsNotEmpty()
+  @IsBoolean()
+  status: boolean;
+
+  @IsNotEmpty()
+  @IsString()
+  faqCategory: string;
 
   @IsNotEmpty()
   @IsString()
