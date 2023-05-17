@@ -10,24 +10,24 @@ export class Area {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'int' })
-  areaId: number;
+  @Column({ type: 'varchar' })
+  areaname: string;
 
   @Column({ type: 'varchar' })
-  areaName: string;
+  areatype: string;
 
   @Column({ type: 'varchar' })
-  areaCode: string;
+  areacentering: string;
 
   @Column({ type: 'varchar' })
-  areaCentering: string;
+  maplocation: string;
 
   @UpdateDateColumn({ type: 'timestamp', default: () => 'now()' })
   modifiedDate: string;
 
   @Column({ type: 'timestamp', nullable: true })
-  startTime: string;
+  startdate: string;
 
   @Column({ type: 'timestamp', nullable: true })
-  endTime: string;
+  enddate: string;
 }
