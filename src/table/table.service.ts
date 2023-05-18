@@ -8,6 +8,8 @@ import {
   CreateTableBrandDto,
   CreateTableCategoryDto,
   CreateTableAreaDto,
+  CreateTableEventmanagementDto,
+  CreateGiftDto,
 } from './dto/create-table.dto';
 import {
   UpdateTableBranchDto,
@@ -16,12 +18,14 @@ import {
   UpdateTableAreaDto,
 } from './dto/update-table.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { FindOneOptions, Repository } from 'typeorm';
 import { Brand } from './entities/table.brand.entity';
 import { Branch } from './entities/table.branch.entity';
 import { Category } from './entities/table.category.entity';
 import { Area } from './entities/table.area.entity';
 import { PaginatedData, paginate } from '../utils/pagination';
+import { Eventmanagement } from './entities/table.eventmanagement.entity';
+import { Gift } from './entities/table.gift.entity';
 
 @Injectable()
 export class TableService {
@@ -34,6 +38,10 @@ export class TableService {
     private categoryRepository: Repository<Category>,
     @InjectRepository(Area)
     private areaRepository: Repository<Area>,
+    @InjectRepository(Eventmanagement)
+    private readonly eventmanagementRepository: Repository<Eventmanagement>,
+    @InjectRepository(Gift)
+    private readonly giftRepository: Repository<Gift>,
   ) {}
 
   //  * Validate ID parameter
@@ -236,5 +244,47 @@ export class TableService {
     if (result.affected === 0) {
       throw new NotFoundException(`Area with ID ${id} not found`);
     }
+  }
+
+  // ************************ Eventmanagement Service ************************
+
+  //  * Create Gifts
+  async createGifts(createGiftDtos: CreateGiftDto[]): Promise<Gift[]> {
+    const gifts = [];
+
+    for (const giftDto of createGiftDtos) {
+      const gift = this.giftRepository.create(giftDto);
+      const createdGift = await this.giftRepository.save(gift);
+      gifts.push(createdGift);
+    }
+
+    return gifts;
+  }
+
+  async createEventmanagementWithGift(
+    createEventmanagementDto: CreateTableEventmanagementDto,
+    createGiftDto: CreateGiftDto[],
+  ): Promise<Eventmanagement> {
+    const eventmanagement = await this.eventmanagementRepository.create(
+      createEventmanagementDto,
+    );
+
+    eventmanagement.giftlist = await this.createGifts(createGiftDto);
+
+    await this.eventmanagementRepository.save(eventmanagement);
+
+    return eventmanagement;
+  }
+
+  async getEventmanagementWithGifts(id: number): Promise<Eventmanagement> {
+    const options: FindOneOptions<Eventmanagement> = {
+      relations: ['giftlist'],
+      where: { id: id },
+    };
+    return this.eventmanagementRepository.findOne(options);
+  }
+
+  async eventmanagement_findAll(): Promise<Eventmanagement[]> {
+    return this.eventmanagementRepository.find();
   }
 }

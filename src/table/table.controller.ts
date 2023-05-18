@@ -14,6 +14,7 @@ import {
   CreateTableBranchDto,
   CreateTableCategoryDto,
   CreateTableAreaDto,
+  CreateEventWithGiftsDto,
 } from './dto/create-table.dto';
 import {
   UpdateTableBrandDto,
@@ -26,6 +27,7 @@ import { Branch } from './entities/table.branch.entity';
 import { Category } from './entities/table.category.entity';
 import { Area } from './entities/table.area.entity';
 import { PaginatedData } from 'src/utils/pagination';
+import { Eventmanagement } from './entities/table.eventmanagement.entity';
 
 @Controller('table')
 export class TableController {
@@ -167,5 +169,27 @@ export class TableController {
   @Delete('/area/:id')
   async area_remove(@Param('id') id: number): Promise<void> {
     return this.tableService.area_remove(+id);
+  }
+
+  // *********************** Event&Gift Controller ***********************
+
+  @Post('/eventmanagement')
+  async createEventmanagementWithGift(
+    @Body() createEventWithGiftsDto: CreateEventWithGiftsDto,
+  ): Promise<Eventmanagement> {
+    const { event, gifts } = createEventWithGiftsDto;
+    return this.tableService.createEventmanagementWithGift(event, gifts);
+  }
+
+  @Get('/eventmanagement/:id')
+  async getEventmanagementWithGifts(
+    @Param('id') id: number,
+  ): Promise<Eventmanagement> {
+    return this.tableService.getEventmanagementWithGifts(id);
+  }
+
+  @Get('/eventmanagement')
+  async eventmanagement_findAll(): Promise<Eventmanagement[]> {
+    return this.tableService.eventmanagement_findAll();
   }
 }
