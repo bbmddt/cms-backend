@@ -1,100 +1,166 @@
-import { IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import {
+  IsBoolean,
+  IsNotEmpty,
+  IsNumber,
+  IsString,
+  IsUrl,
+} from 'class-validator';
 import { Gift } from '../entities/table.gift.entity';
 
 export class CreateTableBrandDto {
   @IsNotEmpty()
-  @IsNumber()
-  brandCode: number;
-
-  @IsNotEmpty()
-  @IsString()
-  brandName: string;
+  @IsBoolean()
+  status: boolean;
 
   @IsNotEmpty()
   @IsBoolean()
-  brandStatus: boolean;
+  lineup: boolean;
+
+  @IsNotEmpty()
+  @IsBoolean()
+  booking: boolean;
+
+  @IsNotEmpty()
+  @IsBoolean()
+  ordering: boolean;
+
+  @IsNotEmpty()
+  @IsNumber()
+  brandcode: number;
 
   @IsNotEmpty()
   @IsString()
-  startTime: string;
+  brandname: string;
 
   @IsNotEmpty()
   @IsString()
-  endTime: string;
+  brandkeyword: string;
+
+  @IsNotEmpty()
+  @IsUrl()
+  brandimage: string;
+
+  @IsNotEmpty()
+  @IsString()
+  brandtype: string;
+
+  @IsNotEmpty()
+  @IsString()
+  brandwebsite: string;
+
+  @IsNotEmpty()
+  @IsString()
+  brandendpoint: string;
+
+  @IsNotEmpty()
+  @IsString()
+  brandremark: string;
+
+  @IsNotEmpty()
+  @IsString()
+  startdate: string;
+
+  @IsNotEmpty()
+  @IsString()
+  enddate: string;
 }
 
 export class CreateTableBranchDto {
   @IsNotEmpty()
-  @IsNumber()
-  branchCode: number;
-
-  @IsNotEmpty()
-  @IsString()
-  branchName: string;
+  @IsBoolean()
+  status: boolean;
 
   @IsNotEmpty()
   @IsBoolean()
-  branchStatus: boolean;
+  lineup: boolean;
+
+  @IsNotEmpty()
+  @IsBoolean()
+  booking: boolean;
+
+  @IsNotEmpty()
+  @IsBoolean()
+  ordering: boolean;
+
+  @IsNotEmpty()
+  @IsString()
+  branchname: string;
 
   @IsNotEmpty()
   @IsNumber()
-  stockNumber: number;
+  branchcode: number;
+
+  @IsNotEmpty()
+  @IsNumber()
+  branchlinecode: number;
 
   @IsNotEmpty()
   @IsString()
-  branchBrand: string;
+  belongbranch: string;
 
   @IsNotEmpty()
   @IsString()
-  startTime: string;
+  branchkeyword: string;
 
   @IsNotEmpty()
   @IsString()
-  endTime: string;
+  brancharea: string;
+
+  @IsNotEmpty()
+  @IsString()
+  branchaddress: string;
+
+  @IsNotEmpty()
+  @IsString()
+  branchphone: string;
+
+  @IsNotEmpty()
+  @IsString()
+  branchworkinghour: string;
+
+  @IsNotEmpty()
+  @IsString()
+  branchbookingendpoint: string;
+
+  @IsNotEmpty()
+  @IsString()
+  startdate: string;
+
+  @IsNotEmpty()
+  @IsString()
+  enddate: string;
+
+  @IsNotEmpty()
+  @IsUrl()
+  maplocation: string;
 }
 
 export class CreateTableCategoryDto {
   @IsNotEmpty()
   @IsString()
-  categoryName: string;
+  categoryname: string;
 
   @IsNotEmpty()
   @IsBoolean()
-  categoryStatus: boolean;
-
-  @IsNotEmpty()
-  @IsString()
-  startTime: string;
-
-  @IsNotEmpty()
-  @IsString()
-  endTime: string;
+  categorystatus: boolean;
 }
 
 export class CreateTableAreaDto {
   @IsNotEmpty()
-  @IsNumber()
-  areaId: number;
+  @IsString()
+  areaname: string;
 
   @IsNotEmpty()
   @IsString()
-  areaName: string;
+  areatype: string;
 
   @IsNotEmpty()
   @IsString()
-  areaCode: string;
+  areacentering: string;
 
   @IsNotEmpty()
-  @IsString()
-  areaCentering: string;
-
-  @IsNotEmpty()
-  @IsString()
-  startTime: string;
-
-  @IsNotEmpty()
-  @IsString()
-  endTime: string;
+  @IsUrl()
+  maplocation: string;
 }
 
 export class CreateTableEventmanagementDto {

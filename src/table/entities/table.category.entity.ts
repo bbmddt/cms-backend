@@ -11,17 +11,11 @@ export class Category {
   id: number;
 
   @Column({ type: 'varchar' })
-  categoryName: string;
+  categoryname: string;
 
   @Column({ type: 'boolean' })
-  categoryStatus: boolean;
+  categorystatus: boolean;
 
   @UpdateDateColumn({ type: 'timestamp', default: () => 'now()' })
   modifiedDate: string;
-
-  @Column({ type: 'timestamp', nullable: true })
-  startTime: string;
-
-  @Column({ type: 'timestamp', nullable: true })
-  endTime: string;
 }
